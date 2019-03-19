@@ -103,9 +103,9 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
 
                 <!-- Social -->
                 <div class=\"social flex-w flex-l-m p-r-20\">
-                    <a href=\"#\"><i class=\"fa fa-tripadvisor\" aria-hidden=\"true\"></i></a>
-                    <a href=\"#\"><i class=\"fa fa-facebook m-l-21\" aria-hidden=\"true\"></i></a>
-                    <a href=\"#\"><i class=\"fa fa-twitter m-l-21\" aria-hidden=\"true\"></i></a>
+                    <a href=\"#\"><i class=\"fab fa-tripadvisor\"></i></a>
+                    <a href=\"#\"><i class=\"fab fa-facebook m-l-21\" aria-hidden=\"true\"></i></a>
+                    <a href=\"#\"><i class=\"fab fa-twitter m-l-21\" aria-hidden=\"true\"></i></a>
 
                     <button class=\"btn-show-sidebar m-l-33 trans-0-4\"></button>
                 </div>
@@ -157,13 +157,19 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
         if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_USER")) {
             // line 138
             echo "            <li class=\"t-center\">
-                <a href=\"\" class=\"btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto\">Logout</a>
+                <a href=\"";
+            // line 139
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_logout");
+            echo "\" class=\"btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto\">Logout</a>
             </li>
         ";
         } else {
             // line 142
             echo "            <li class=\"t-center\">
-                <a href=\"\" class=\"btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto\">Login</a>
+                <a href=\"";
+            // line 143
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fos_user_security_login");
+            echo "\" class=\"btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto\">Login</a>
             </li>
         ";
         }
@@ -291,18 +297,17 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
 
                 <ul class=\"m-b-70\">
                     <li class=\"txt14 m-b-14\">
-                        <i class=\"fa fa-map-marker fs-16 dis-inline-block size19\" aria-hidden=\"true\"></i>
+                        <i class=\"fas fa-map-marker-alt\"></i>
                         8th floor, 379 Hudson St, New York, NY 10018
                     </li>
 
                     <li class=\"txt14 m-b-14\">
-                        <i class=\"fa fa-phone fs-16 dis-inline-block size19\" aria-hidden=\"true\"></i>
+                        <i class=\"far fa-phone\"></i>
                         (+1) 96 716 6879
                     </li>
 
                     <li class=\"txt14 m-b-14\">
-                        <i class=\"fa fa-envelope fs-13 dis-inline-block size19\" aria-hidden=\"true\"></i>
-                        contact@site.com
+                        <i class=\"far fa-file-contract\"></i>                        contact@site.com
                     </li>
                 </ul>
 
@@ -330,7 +335,7 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
 
                 <div class=\"m-b-25\">
                         <span class=\"fs-13 color2 m-r-5\">
-                            <i class=\"fa fa-twitter\" aria-hidden=\"true\"></i>
+                            <i class=\"fab fa-twitter\" aria-hidden=\"true\"></i>
                         </span>
                     <a href=\"#\" class=\"txt15\">
                         @colorlib
@@ -350,7 +355,7 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
 
                 <div>
                         <span class=\"fs-13 color2 m-r-5\">
-                            <i class=\"fa fa-twitter\" aria-hidden=\"true\"></i>
+                            <i class=\"fab fa-twitter\" aria-hidden=\"true\"></i>
                         </span>
                     <a href=\"#\" class=\"txt15\">
                         @colorlib
@@ -378,121 +383,121 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
                 <!-- Gallery footer -->
                 <div class=\"wrap-gallery-footer flex-w\">
                     <a class=\"item-gallery-footer wrap-pic-w\" href=\"";
-        // line 298
+        // line 297
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-01.jpg"), "html", null, true);
         echo "\" data-lightbox=\"gallery-footer\">
                         <img src=\"";
-        // line 299
+        // line 298
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-thumb-01.jpg"), "html", null, true);
         echo "\" alt=\"GALLERY\">
                     </a>
 
                     <a class=\"item-gallery-footer wrap-pic-w\" href=\"";
-        // line 302
+        // line 301
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-02.jpg"), "html", null, true);
         echo "\" data-lightbox=\"gallery-footer\">
                         <img src=\"";
-        // line 303
+        // line 302
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-thumb-02.jpg"), "html", null, true);
         echo "\" alt=\"GALLERY\">
                     </a>
 
                     <a class=\"item-gallery-footer wrap-pic-w\" href=\"";
-        // line 306
+        // line 305
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-03.jpg"), "html", null, true);
         echo "\" data-lightbox=\"gallery-footer\">
                         <img src=\"";
-        // line 307
+        // line 306
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-thumb-03.jpg"), "html", null, true);
         echo "\" alt=\"GALLERY\">
                     </a>
 
                     <a class=\"item-gallery-footer wrap-pic-w\" href=\"";
-        // line 310
+        // line 309
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-04.jpg"), "html", null, true);
         echo "\" data-lightbox=\"gallery-footer\">
                         <img src=\"";
-        // line 311
+        // line 310
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-thumb-04.jpg"), "html", null, true);
         echo "\" alt=\"GALLERY\">
                     </a>
 
                     <a class=\"item-gallery-footer wrap-pic-w\" href=\"";
-        // line 314
+        // line 313
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-05.jpg"), "html", null, true);
         echo "\" data-lightbox=\"gallery-footer\">
                         <img src=\"";
-        // line 315
+        // line 314
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-thumb-05.jpg"), "html", null, true);
         echo "\" alt=\"GALLERY\">
                     </a>
 
                     <a class=\"item-gallery-footer wrap-pic-w\" href=\"";
-        // line 318
+        // line 317
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-06.jpg"), "html", null, true);
         echo "\" data-lightbox=\"gallery-footer\">
                         <img src=\"";
-        // line 319
+        // line 318
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-thumb-06.jpg"), "html", null, true);
         echo "\" alt=\"GALLERY\">
                     </a>
 
                     <a class=\"item-gallery-footer wrap-pic-w\" href=\"";
-        // line 322
+        // line 321
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-07.jpg"), "html", null, true);
         echo "\" data-lightbox=\"gallery-footer\">
                         <img src=\"";
-        // line 323
+        // line 322
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-thumb-07.jpg"), "html", null, true);
         echo "\" alt=\"GALLERY\">
                     </a>
 
                     <a class=\"item-gallery-footer wrap-pic-w\" href=\"";
-        // line 326
+        // line 325
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-08.jpg"), "html", null, true);
         echo "\" data-lightbox=\"gallery-footer\">
                         <img src=\"";
-        // line 327
+        // line 326
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-thumb-08.jpg"), "html", null, true);
         echo "\" alt=\"GALLERY\">
                     </a>
 
                     <a class=\"item-gallery-footer wrap-pic-w\" href=\"";
-        // line 330
+        // line 329
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-09.jpg"), "html", null, true);
         echo "\" data-lightbox=\"gallery-footer\">
                         <img src=\"";
-        // line 331
+        // line 330
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-thumb-09.jpg"), "html", null, true);
         echo "\" alt=\"GALLERY\">
                     </a>
 
                     <a class=\"item-gallery-footer wrap-pic-w\" href=\"";
-        // line 334
+        // line 333
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-10.jpg"), "html", null, true);
         echo "\" data-lightbox=\"gallery-footer\">
                         <img src=\"";
-        // line 335
+        // line 334
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-thumb-10.jpg"), "html", null, true);
         echo "\" alt=\"GALLERY\">
                     </a>
 
                     <a class=\"item-gallery-footer wrap-pic-w\" href=\"";
-        // line 338
+        // line 337
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-11.jpg"), "html", null, true);
         echo "\" data-lightbox=\"gallery-footer\">
                         <img src=\"";
-        // line 339
+        // line 338
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-thumb-11.jpg"), "html", null, true);
         echo "\" alt=\"GALLERY\">
                     </a>
 
                     <a class=\"item-gallery-footer wrap-pic-w\" href=\"";
-        // line 342
+        // line 341
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-12.jpg"), "html", null, true);
         echo "\" data-lightbox=\"gallery-footer\">
                         <img src=\"";
-        // line 343
+        // line 342
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/photo-gallery-thumb-12.jpg"), "html", null, true);
         echo "\" alt=\"GALLERY\">
                     </a>
@@ -506,13 +511,13 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
         <div class=\"container\">
             <div class=\"flex-sb-m flex-w p-t-22 p-b-22\">
                 <div class=\"p-t-5 p-b-5\">
-                    <a href=\"#\" class=\"fs-15 c-white\"><i class=\"fa fa-tripadvisor\" aria-hidden=\"true\"></i></a>
-                    <a href=\"#\" class=\"fs-15 c-white\"><i class=\"fa fa-facebook m-l-18\" aria-hidden=\"true\"></i></a>
-                    <a href=\"#\" class=\"fs-15 c-white\"><i class=\"fa fa-twitter m-l-18\" aria-hidden=\"true\"></i></a>
+                    <a href=\"#\" class=\"fs-15 c-white\"><i class=\"fab fa-tripadvisor\" aria-hidden=\"true\"></i></a>
+                    <a href=\"#\" class=\"fs-15 c-white\"><i class=\"fab fa-facebook m-l-18\" aria-hidden=\"true\"></i></a>
+                    <a href=\"#\" class=\"fs-15 c-white\"><i class=\"fab fa-twitter m-l-18\" aria-hidden=\"true\"></i></a>
                 </div>
 
                 <div class=\"txt17 p-r-20 p-t-5 p-b-5\">
-                    Copyright &copy; 2018 All rights reserved  |  This template is made with <i class=\"fa fa-heart\"></i> by <a href=\"https://colorlib.com\" target=\"_blank\">Colorlib</a>
+                    Copyright &copy; 2018 All rights reserved  |  This template is made with <i class=\"fab fa-heart\"></i> by <a href=\"https://colorlib.com\" target=\"_blank\">Colorlib</a>
                 </div>
             </div>
         </div>
@@ -523,13 +528,13 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
 <!-- Back to top -->
 <div class=\"btn-back-to-top bg0-hov\" id=\"myBtn\">
         <span class=\"symbol-btn-back-to-top\">
-            <i class=\"fa fa-angle-double-up\" aria-hidden=\"true\"></i>
+            <i class=\"fab fa-angle-double-up\" aria-hidden=\"true\"></i>
         </span>
 </div>
 ";
-        // line 375
+        // line 374
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 408
+        // line 434
         echo "</body>
 </html>
 ";
@@ -665,7 +670,7 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
 
     }
 
-    // line 375
+    // line 374
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -674,52 +679,79 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 376
-        echo "    <!--===============================================================================================-->
+        // line 375
+        echo "    <script src=\"https://unpkg.com/axios/dist/axios.min.js\"></script>
+    <script>
+        var likelink=document.querySelectorAll('link')
+        document.querySelectorAll('.link').forEach(function(link){
+            link.addEventListener('click',onClickBtnLlike)
+
+        })
+        function onClickBtnLlike(event) {
+            event.preventDefault();
+            const url=this.href;
+            const spanCount=this.querySelector('span.js-likes')
+            console.log(\"biiij\");
+            axios.get(url).then(function (response) {
+                console.log(response);
+
+                console.log(response.data.likes);
+                spanCount.textContent=response.data.likes;
+                console.log(\"biiij\");
+
+            })
+
+
+        }
+
+    </script>
+
+
+    <!--===============================================================================================-->
     <script type=\"text/javascript\" src=\"";
-        // line 377
+        // line 403
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/vendor/jquery/jquery-3.2.1.min.js"), "html", null, true);
         echo "\"></script>
     <!--===============================================================================================-->
     <script type=\"text/javascript\" src=\"";
-        // line 379
+        // line 405
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/vendor/animsition/js/animsition.min.js"), "html", null, true);
         echo "\"></script>
     <!--===============================================================================================-->
     <script type=\"text/javascript\" src=\"";
-        // line 381
+        // line 407
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/vendor/bootstrap/js/popper.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 382
+        // line 408
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/vendor/bootstrap/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <!--===============================================================================================-->
     <script type=\"text/javascript\" src=\"";
-        // line 384
+        // line 410
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/vendor/select2/select2.min.js"), "html", null, true);
         echo "\"></script>
     <!--===============================================================================================-->
     <script type=\"text/javascript\" src=\"";
-        // line 386
+        // line 412
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/vendor/daterangepicker/moment.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 387
+        // line 413
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/vendor/daterangepicker/daterangepicker.js"), "html", null, true);
         echo "\"></script>
     <!--===============================================================================================-->
     <script type=\"text/javascript\" src=\"";
-        // line 389
+        // line 415
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/vendor/slick/slick.min.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\" src=\"";
-        // line 390
+        // line 416
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/slick-custom.js"), "html", null, true);
         echo "\"></script>
     <!--===============================================================================================-->
     <script type=\"text/javascript\" src=\"";
-        // line 392
+        // line 418
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/vendor/parallax100/parallax100.js"), "html", null, true);
         echo "\"></script>
     <script type=\"text/javascript\">
@@ -727,31 +759,31 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
     </script>
     <!--===============================================================================================-->
     <script type=\"text/javascript\" src=\"";
-        // line 397
+        // line 423
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/vendor/countdowntime/countdowntime.js"), "html", null, true);
         echo "\"></script>
     <!--===============================================================================================-->
     <script type=\"text/javascript\" src=\"";
-        // line 399
+        // line 425
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/vendor/lightbox2/js/lightbox.min.js"), "html", null, true);
         echo "\"></script>
     <!--===============================================================================================-->
     <script type=\"text/javascript\" src=\"";
-        // line 401
+        // line 427
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/vendor/isotope/isotope.pkgd.min.js"), "html", null, true);
         echo "\"></script>
     <!--===============================================================================================-->
     <script src=\"";
-        // line 403
+        // line 429
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/googlemaps.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 404
+        // line 430
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/map-custom.js"), "html", null, true);
         echo "\"></script>
     <!--===============================================================================================-->
     <script src=\"";
-        // line 406
+        // line 432
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/main.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -775,7 +807,7 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
 
     public function getDebugInfo()
     {
-        return array (  755 => 406,  750 => 404,  746 => 403,  741 => 401,  736 => 399,  731 => 397,  723 => 392,  718 => 390,  714 => 389,  709 => 387,  705 => 386,  700 => 384,  695 => 382,  691 => 381,  686 => 379,  681 => 377,  678 => 376,  669 => 375,  652 => 199,  640 => 35,  636 => 34,  631 => 32,  626 => 30,  621 => 28,  614 => 24,  609 => 22,  604 => 20,  599 => 18,  594 => 16,  589 => 14,  584 => 12,  579 => 10,  574 => 8,  571 => 7,  562 => 6,  545 => 5,  533 => 408,  531 => 375,  496 => 343,  492 => 342,  486 => 339,  482 => 338,  476 => 335,  472 => 334,  466 => 331,  462 => 330,  456 => 327,  452 => 326,  446 => 323,  442 => 322,  436 => 319,  432 => 318,  426 => 315,  422 => 314,  416 => 311,  412 => 310,  406 => 307,  402 => 306,  396 => 303,  392 => 302,  386 => 299,  382 => 298,  282 => 200,  280 => 199,  269 => 191,  265 => 190,  259 => 187,  255 => 186,  249 => 183,  245 => 182,  239 => 179,  235 => 178,  229 => 175,  225 => 174,  219 => 171,  215 => 170,  209 => 167,  205 => 166,  199 => 163,  195 => 162,  189 => 159,  185 => 158,  171 => 146,  165 => 142,  159 => 138,  157 => 137,  147 => 130,  93 => 79,  70 => 59,  56 => 50,  41 => 37,  39 => 6,  35 => 5,  29 => 1,);
+        return array (  787 => 432,  782 => 430,  778 => 429,  773 => 427,  768 => 425,  763 => 423,  755 => 418,  750 => 416,  746 => 415,  741 => 413,  737 => 412,  732 => 410,  727 => 408,  723 => 407,  718 => 405,  713 => 403,  683 => 375,  674 => 374,  657 => 199,  645 => 35,  641 => 34,  636 => 32,  631 => 30,  626 => 28,  619 => 24,  614 => 22,  609 => 20,  604 => 18,  599 => 16,  594 => 14,  589 => 12,  584 => 10,  579 => 8,  576 => 7,  567 => 6,  550 => 5,  538 => 434,  536 => 374,  501 => 342,  497 => 341,  491 => 338,  487 => 337,  481 => 334,  477 => 333,  471 => 330,  467 => 329,  461 => 326,  457 => 325,  451 => 322,  447 => 321,  441 => 318,  437 => 317,  431 => 314,  427 => 313,  421 => 310,  417 => 309,  411 => 306,  407 => 305,  401 => 302,  397 => 301,  391 => 298,  387 => 297,  288 => 200,  286 => 199,  275 => 191,  271 => 190,  265 => 187,  261 => 186,  255 => 183,  251 => 182,  245 => 179,  241 => 178,  235 => 175,  231 => 174,  225 => 171,  221 => 170,  215 => 167,  211 => 166,  205 => 163,  201 => 162,  195 => 159,  191 => 158,  177 => 146,  171 => 143,  168 => 142,  162 => 139,  159 => 138,  157 => 137,  147 => 130,  93 => 79,  70 => 59,  56 => 50,  41 => 37,  39 => 6,  35 => 5,  29 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -878,9 +910,9 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
 
                 <!-- Social -->
                 <div class=\"social flex-w flex-l-m p-r-20\">
-                    <a href=\"#\"><i class=\"fa fa-tripadvisor\" aria-hidden=\"true\"></i></a>
-                    <a href=\"#\"><i class=\"fa fa-facebook m-l-21\" aria-hidden=\"true\"></i></a>
-                    <a href=\"#\"><i class=\"fa fa-twitter m-l-21\" aria-hidden=\"true\"></i></a>
+                    <a href=\"#\"><i class=\"fab fa-tripadvisor\"></i></a>
+                    <a href=\"#\"><i class=\"fab fa-facebook m-l-21\" aria-hidden=\"true\"></i></a>
+                    <a href=\"#\"><i class=\"fab fa-twitter m-l-21\" aria-hidden=\"true\"></i></a>
 
                     <button class=\"btn-show-sidebar m-l-33 trans-0-4\"></button>
                 </div>
@@ -926,11 +958,11 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
 
         {% if is_granted(\"ROLE_USER\") %}
             <li class=\"t-center\">
-                <a href=\"\" class=\"btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto\">Logout</a>
+                <a href=\"{{  path('fos_user_security_logout')}}\" class=\"btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto\">Logout</a>
             </li>
         {% else %}
             <li class=\"t-center\">
-                <a href=\"\" class=\"btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto\">Login</a>
+                <a href=\"{{ path('fos_user_security_login') }}\" class=\"btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto\">Login</a>
             </li>
         {% endif %}
 
@@ -999,18 +1031,17 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
 
                 <ul class=\"m-b-70\">
                     <li class=\"txt14 m-b-14\">
-                        <i class=\"fa fa-map-marker fs-16 dis-inline-block size19\" aria-hidden=\"true\"></i>
+                        <i class=\"fas fa-map-marker-alt\"></i>
                         8th floor, 379 Hudson St, New York, NY 10018
                     </li>
 
                     <li class=\"txt14 m-b-14\">
-                        <i class=\"fa fa-phone fs-16 dis-inline-block size19\" aria-hidden=\"true\"></i>
+                        <i class=\"far fa-phone\"></i>
                         (+1) 96 716 6879
                     </li>
 
                     <li class=\"txt14 m-b-14\">
-                        <i class=\"fa fa-envelope fs-13 dis-inline-block size19\" aria-hidden=\"true\"></i>
-                        contact@site.com
+                        <i class=\"far fa-file-contract\"></i>                        contact@site.com
                     </li>
                 </ul>
 
@@ -1038,7 +1069,7 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
 
                 <div class=\"m-b-25\">
                         <span class=\"fs-13 color2 m-r-5\">
-                            <i class=\"fa fa-twitter\" aria-hidden=\"true\"></i>
+                            <i class=\"fab fa-twitter\" aria-hidden=\"true\"></i>
                         </span>
                     <a href=\"#\" class=\"txt15\">
                         @colorlib
@@ -1058,7 +1089,7 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
 
                 <div>
                         <span class=\"fs-13 color2 m-r-5\">
-                            <i class=\"fa fa-twitter\" aria-hidden=\"true\"></i>
+                            <i class=\"fab fa-twitter\" aria-hidden=\"true\"></i>
                         </span>
                     <a href=\"#\" class=\"txt15\">
                         @colorlib
@@ -1142,13 +1173,13 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
         <div class=\"container\">
             <div class=\"flex-sb-m flex-w p-t-22 p-b-22\">
                 <div class=\"p-t-5 p-b-5\">
-                    <a href=\"#\" class=\"fs-15 c-white\"><i class=\"fa fa-tripadvisor\" aria-hidden=\"true\"></i></a>
-                    <a href=\"#\" class=\"fs-15 c-white\"><i class=\"fa fa-facebook m-l-18\" aria-hidden=\"true\"></i></a>
-                    <a href=\"#\" class=\"fs-15 c-white\"><i class=\"fa fa-twitter m-l-18\" aria-hidden=\"true\"></i></a>
+                    <a href=\"#\" class=\"fs-15 c-white\"><i class=\"fab fa-tripadvisor\" aria-hidden=\"true\"></i></a>
+                    <a href=\"#\" class=\"fs-15 c-white\"><i class=\"fab fa-facebook m-l-18\" aria-hidden=\"true\"></i></a>
+                    <a href=\"#\" class=\"fs-15 c-white\"><i class=\"fab fa-twitter m-l-18\" aria-hidden=\"true\"></i></a>
                 </div>
 
                 <div class=\"txt17 p-r-20 p-t-5 p-b-5\">
-                    Copyright &copy; 2018 All rights reserved  |  This template is made with <i class=\"fa fa-heart\"></i> by <a href=\"https://colorlib.com\" target=\"_blank\">Colorlib</a>
+                    Copyright &copy; 2018 All rights reserved  |  This template is made with <i class=\"fab fa-heart\"></i> by <a href=\"https://colorlib.com\" target=\"_blank\">Colorlib</a>
                 </div>
             </div>
         </div>
@@ -1159,10 +1190,37 @@ class __TwigTemplate_8f43a4d52312299104ebd2535e2c8df4722fc3cdf32682244262c866bbc
 <!-- Back to top -->
 <div class=\"btn-back-to-top bg0-hov\" id=\"myBtn\">
         <span class=\"symbol-btn-back-to-top\">
-            <i class=\"fa fa-angle-double-up\" aria-hidden=\"true\"></i>
+            <i class=\"fab fa-angle-double-up\" aria-hidden=\"true\"></i>
         </span>
 </div>
 {% block javascripts %}
+    <script src=\"https://unpkg.com/axios/dist/axios.min.js\"></script>
+    <script>
+        var likelink=document.querySelectorAll('link')
+        document.querySelectorAll('.link').forEach(function(link){
+            link.addEventListener('click',onClickBtnLlike)
+
+        })
+        function onClickBtnLlike(event) {
+            event.preventDefault();
+            const url=this.href;
+            const spanCount=this.querySelector('span.js-likes')
+            console.log(\"biiij\");
+            axios.get(url).then(function (response) {
+                console.log(response);
+
+                console.log(response.data.likes);
+                spanCount.textContent=response.data.likes;
+                console.log(\"biiij\");
+
+            })
+
+
+        }
+
+    </script>
+
+
     <!--===============================================================================================-->
     <script type=\"text/javascript\" src=\"{{ asset('assets/vendor/jquery/jquery-3.2.1.min.js') }}\"></script>
     <!--===============================================================================================-->

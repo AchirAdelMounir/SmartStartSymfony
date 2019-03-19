@@ -82,22 +82,28 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
     <section>
         <div class=\"bread-crumb bo5-b p-t-17 p-b-17\">
             <div class=\"container\">
-                <a href=\"\" class=\"txt27\">
+                <a href=\"";
+        // line 18
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_ListPosts");
+        echo "\" class=\"txt27\">
                     Home
                 </a>
 
                 <span class=\"txt29 m-l-10 m-r-10\">/</span>
 
-                <span class=\"txt29\">
-\t\t\t\t\tBlog
-\t\t\t\t</span>
+                <a href=\"";
+        // line 24
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_ListPosts");
+        echo "\" class=\"txt27\">
+                    Blog
+                </a>
 
         ";
         // line 28
         if (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []) != null)) {
             // line 29
             echo "            </div>
-            <a href=\"#addEmployeeModal\" class=\"btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto\" data-toggle=\"modal\"><i class=\"material-icons\">&#xE147;</i> <span>  Add A Post</span></a>
+            <a href=\"#addEmployeeModal\" class=\"btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto\" data-toggle=\"modal\"><i class=\"material-icons\">&#xE147;</i> <span>Add A Post</span></a>
 
             </div>
         <!-- Add Modal HTML -->
@@ -112,6 +118,8 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
 
 
 
+
+
                     <div class=\"modal-header\">
                         <h4 class=\"modal-title\">Add A Post</h4>
                         <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
@@ -120,7 +128,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                         <div class=\"form-group\">
                             <label>Post Content</label>
                             ";
-            // line 49
+            // line 51
             echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "postContent", []), 'widget', ["attr" => ["class" => "form-control", "type" => "textarea"]]);
             echo "
 
@@ -128,7 +136,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                         <div class=\"form-group\">
                             <label>Post Type</label>
                             ";
-            // line 54
+            // line 56
             echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "postType", []), 'widget', ["attr" => ["class" => "form-control", "style" => "font-size: 12px"]]);
             echo "
 
@@ -136,7 +144,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                         <div class=\"form-group\">
                             <label>Article Title</label>
                             ";
-            // line 59
+            // line 61
             echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "articleTitle", []), 'widget', ["attr" => ["class" => "form-control", "type" => "textarea"]]);
             echo "
 
@@ -144,15 +152,15 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                         <div class=\"form-group\">
                             <label>Article Content</label>
                             ";
-            // line 64
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "articleContent", []), 'widget', ["attr" => ["class" => "form-control", "type" => "textarea"]]);
+            // line 66
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "articleContent", []), 'widget');
             echo "
 
                         </div>
                         <div class=\"form-group\">
                             <label>Your Image</label>
                             ";
-            // line 69
+            // line 71
             echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "image", []), 'widget', ["attr" => ["class" => "form-control", "style" => "font-size: 12px"]]);
             echo "
 
@@ -160,10 +168,10 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                     </div>
                     <div class=\"modal-footer\">
                         <input type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" value=\"Cancel\">
-                        <input type=\"submit\" class=\"btn btn-success\" value=\"Add\">
+                        <input type=\"submit\" onclick=\"myFunction()\" id=\"form\" name=\"form\" class=\"btn btn-success\" id=\"addb\" value=\"Add\">
                     </div>
                     ";
-            // line 77
+            // line 79
             echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
             echo "
                 </div>
@@ -171,7 +179,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
         </div>
         ";
         }
-        // line 82
+        // line 84
         echo "
 
         <div class=\"container\">
@@ -183,19 +191,19 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
 
                         <!-- Block4 -->
                         ";
-        // line 92
+        // line 94
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")));
         foreach ($context['_seq'] as $context["_key"] => $context["blogposts"]) {
-            // line 93
-            echo "                        <div class=\"blo4 p-b-63\">
+            // line 95
+            echo "                        <div class=\"blo4 p-b-63\" id=\"content\">
                             <div class=\"pic-blo4 hov-img-zoom bo-rad-10 pos-relative\">
                                 <a href=";
-            // line 95
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_detailblog");
+            // line 97
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_Detail", ["postId" => $this->getAttribute($context["blogposts"], "postId", [])]), "html", null, true);
             echo ">
-                                    <img src=\"";
-            // line 96
+                                    <img  src=\"";
+            // line 98
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/images/" . $this->getAttribute($context["blogposts"], "image", []))), "html", null, true);
             echo "\" width=\"600\" height=\"427\" alt=\"IMG-BLOG\">
                                 </a>
@@ -208,7 +216,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
 
                                     <span class=\"txt31\">
 \t\t\t\t\t\t\t\t\t\t";
-            // line 106
+            // line 108
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["blogposts"], "postDate", []), "m/d/Y"), "html", null, true);
             echo "
 \t\t\t\t\t\t\t\t\t</span>
@@ -216,34 +224,71 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                             </div>
 
                             <div class=\"text-blo4 p-t-33\">
+
                                 ";
-            // line 112
+            // line 115
             if (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []) != null)) {
-                // line 113
+                // line 116
                 echo "                                ";
                 if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []), "id", []) == $this->getAttribute($this->getAttribute($context["blogposts"], "author", []), "id", []))) {
-                    // line 114
-                    echo "                                <a href=\"#myModal\" class=\"delete\" data-toggle=\"modal\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Delete\">&#xE872;</i></a>
+                    // line 117
+                    echo "                                <a href=\"#myModal\" class=\"delete\" data-toggle=\"modal\"><i class=\"fas fa-trash-alt\" data-toggle=\"tooltip\" title=\"Delete\"></i></a>
 
-                                <a href=\"#editEmployeeModal\" class=\"edit\" data-toggle=\"modal\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Edit\">&#xE254;</i></a>
+                                <a href=\"";
+                    // line 119
+                    echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("Update_BlogPost", ["postId" => $this->getAttribute($context["blogposts"], "postId", [])]), "html", null, true);
+                    echo "\"><i class=\"fas fa-edit\" data-toggle=\"tooltip\" title=\"Edit\"></i></a>
                                 ";
                 }
-                // line 118
+                // line 121
                 echo "                                ";
             }
-            // line 119
+            // line 122
+            echo "                                ";
+            if (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []) != null)) {
+                // line 123
+                echo "                                <a href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_Like", ["postId" => $this->getAttribute($context["blogposts"], "postId", []), "id" => $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []), "id", [])]), "html", null, true);
+                echo "\" class=\"link\">
+                                    <i class=\"far fa-thumbs-up\" style=\"color:midnightblue\"></i>
+                                    <span class=\"js-likes\" style=\"color: midnightblue\">";
+                // line 125
+                echo twig_escape_filter($this->env, $this->getAttribute($context["blogposts"], "postLikesCount", []), "html", null, true);
+                echo "</span>
+                                    <span class=\"js-label\" style=\"color: midnightblue\">Like</span>
+                                </a>
+                                ";
+            }
+            // line 129
+            echo "                                ";
+            if (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []) == null)) {
+                // line 130
+                echo "                                    <a>
+                                        <i class=\"far fa-thumbs-up\" style=\"color:midnightblue\"></i>
+                                        <span class=\"js-likes\" style=\"color: midnightblue\">";
+                // line 132
+                echo twig_escape_filter($this->env, $this->getAttribute($context["blogposts"], "postLikesCount", []), "html", null, true);
+                echo "</span>
+                                        <span class=\"js-label\" style=\"color: midnightblue\">Like</span>
+                                    </a>
+                                ";
+            }
+            // line 136
             echo "
                                 <h4 class=\"p-b-16\">
-                                    <a href=\"\" class=\"tit9\">";
-            // line 121
+                                    <a href=";
+            // line 138
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_Detail", ["postId" => $this->getAttribute($context["blogposts"], "postId", [])]), "html", null, true);
+            echo " class=\"tit9\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["blogposts"], "postContent", []), "html", null, true);
             echo "</a>
                                 </h4>
 
+
                                 <div class=\"txt32 flex-w p-b-24\">
 \t\t\t\t\t\t\t\t\t<span>
 \t\t\t\t\t\t\t\t\t\tby ";
-            // line 126
+            // line 144
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["blogposts"], "author", []), "username", []), "html", null, true);
             echo "
 \t\t\t\t\t\t\t\t\t\t<span class=\"m-r-6 m-l-4\">|</span>
@@ -251,7 +296,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
 
                                     <span>
 \t\t\t\t\t\t\t\t\t\t";
-            // line 131
+            // line 149
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["blogposts"], "postDate", []), "m/d/Y"), "html", null, true);
             echo "
 \t\t\t\t\t\t\t\t\t\t<span class=\"m-r-6 m-l-4\">|</span>
@@ -259,7 +304,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
 
                                     <span>
 \t\t\t\t\t\t\t\t\t\t";
-            // line 136
+            // line 154
             echo twig_escape_filter($this->env, $this->getAttribute($context["blogposts"], "postType", []), "html", null, true);
             echo "
 \t\t\t\t\t\t\t\t\t\t<span class=\"m-r-6 m-l-4\">|</span>
@@ -267,7 +312,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
 
                                     <span>
 \t\t\t\t\t\t\t\t\t\t";
-            // line 141
+            // line 159
             echo twig_escape_filter($this->env, $this->getAttribute($context["blogposts"], "postCommentCount", []), "html", null, true);
             echo " Comments
                                         <span class=\"m-r-6 m-l-4\">|</span>
@@ -275,9 +320,9 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
 
 
                                     ";
-            // line 146
+            // line 164
             if (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []) != null)) {
-                // line 147
+                // line 165
                 echo "
                                             <!-- Modal HTML -->
                                             <div id=\"myModal\" class=\"modal fade\">
@@ -296,9 +341,10 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                                                         <div class=\"modal-footer\">
                                                             <button type=\"button\" class=\"btn btn-info\" data-dismiss=\"modal\">Cancel</button>
                                                             <a href=\"";
-                // line 164
+                // line 182
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_delete", ["postId" => $this->getAttribute($context["blogposts"], "postId", [])]), "html", null, true);
                 echo "\" type=\"button\" class=\"btn btn-danger\"><label style=\"color:white;\">Delete</label></a>
+
 
                                                         </div>
                                                     </div>
@@ -342,23 +388,23 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                                             </div>
                                     ";
             }
-            // line 207
+            // line 226
             echo "
                                 </div>
 
                                 <p style=\" word-wrap:break-word\">
                                     ";
-            // line 211
-            echo twig_escape_filter($this->env, $this->getAttribute($context["blogposts"], "articleContent", []), "html", null, true);
+            // line 230
+            echo $this->getAttribute($context["blogposts"], "articleContent", []);
             echo "
                                 </p>
 
-                                <a href=";
-            // line 214
+                                <a class=\"dis-block txt4m-t-30\" href=";
+            // line 233
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_Detail", ["postId" => $this->getAttribute($context["blogposts"], "postId", [])]), "html", null, true);
-            echo " class=\"dis-block txt4 m-t-30\">
+            echo " >
                                 Continue Reading
-                                <i class=\"fa fa-long-arrow-right m-l-10\" aria-hidden=\"true\"></i>
+                                <i class=\"fas fa-book-open\"></i>
                                 </a>
                             </div>
                         </div>
@@ -367,7 +413,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['blogposts'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 221
+        // line 240
         echo "
 
 
@@ -376,7 +422,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
 
                         <div class=\"pagination flex-l-m flex-w m-l--6 p-t-25\">
                             ";
-        // line 228
+        // line 247
         echo $this->env->getExtension('Tiloweb\PaginationBundle\Twig\Extension\PaginationExtension')->paginationFunction((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")), "page");
         echo "
 
@@ -401,31 +447,36 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                             <ul>
                                 <li class=\"bo5-b p-t-8 p-b-8\">
                                     <a href=\"#\" class=\"txt27\">
-                                        Cooking recipe
+                                        Newsjacking
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
                                     <a href=\"#\" class=\"txt27\">
-                                        Delicious foods
+                                        Instructional
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
                                     <a href=\"#\" class=\"txt27\">
-                                        Events Design
+                                        Personal Spotlight
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
                                     <a href=\"#\" class=\"txt27\">
-                                        Restaurant Place
+                                        Cheat Sheet
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
                                     <a href=\"#\" class=\"txt27\">
-                                        WordPress
+                                        Media
+                                    </a>
+                                </li>
+                                <li class=\"bo5-b p-t-8 p-b-8\">
+                                    <a href=\"#\" class=\"txt27\">
+                                        Entertaining
                                     </a>
                                 </li>
                             </ul>
@@ -442,7 +493,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                                     <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
                                         <a href=\"#\">
                                             <img src=\"";
-        // line 291
+        // line 315
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/blog-11.jpg"), "html", null, true);
         echo "\" alt=\"IMG-BLOG\">
                                         </a>
@@ -463,7 +514,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                                     <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
                                         <a href=\"#\">
                                             <img src=\"";
-        // line 309
+        // line 333
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/blog-12.jpg"), "html", null, true);
         echo "\" alt=\"IMG-BLOG\">
                                         </a>
@@ -484,7 +535,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                                     <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
                                         <a href=\"#\">
                                             <img src=\"";
-        // line 327
+        // line 351
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/blog-13.jpg"), "html", null, true);
         echo "\" alt=\"IMG-BLOG\">
                                         </a>
@@ -505,7 +556,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                                     <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
                                         <a href=\"#\">
                                             <img src=\"";
-        // line 345
+        // line 369
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/blog-14.jpg"), "html", null, true);
         echo "\" alt=\"IMG-BLOG\">
                                         </a>
@@ -526,7 +577,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                                     <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
                                         <a href=\"#\">
                                             <img src=\"";
-        // line 363
+        // line 387
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/blog-15.jpg"), "html", null, true);
         echo "\" alt=\"IMG-BLOG\">
                                         </a>
@@ -638,7 +689,15 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                 </div>
             </div>
         </div>
+
+
     </section>
+
+
+
+
+
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -660,7 +719,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
 
     public function getDebugInfo()
     {
-        return array (  530 => 363,  509 => 345,  488 => 327,  467 => 309,  446 => 291,  380 => 228,  371 => 221,  358 => 214,  352 => 211,  346 => 207,  300 => 164,  281 => 147,  279 => 146,  271 => 141,  263 => 136,  255 => 131,  247 => 126,  239 => 121,  235 => 119,  232 => 118,  226 => 114,  223 => 113,  221 => 112,  212 => 106,  199 => 96,  195 => 95,  191 => 93,  187 => 92,  175 => 82,  167 => 77,  156 => 69,  148 => 64,  140 => 59,  132 => 54,  124 => 49,  109 => 37,  99 => 29,  97 => 28,  74 => 8,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
+        return array (  581 => 387,  560 => 369,  539 => 351,  518 => 333,  497 => 315,  426 => 247,  417 => 240,  404 => 233,  398 => 230,  392 => 226,  345 => 182,  326 => 165,  324 => 164,  316 => 159,  308 => 154,  300 => 149,  292 => 144,  281 => 138,  277 => 136,  270 => 132,  266 => 130,  263 => 129,  256 => 125,  250 => 123,  247 => 122,  244 => 121,  239 => 119,  235 => 117,  232 => 116,  230 => 115,  220 => 108,  207 => 98,  203 => 97,  199 => 95,  195 => 94,  183 => 84,  175 => 79,  164 => 71,  156 => 66,  148 => 61,  140 => 56,  132 => 51,  115 => 37,  105 => 29,  103 => 28,  96 => 24,  87 => 18,  74 => 8,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -690,19 +749,19 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
     <section>
         <div class=\"bread-crumb bo5-b p-t-17 p-b-17\">
             <div class=\"container\">
-                <a href=\"\" class=\"txt27\">
+                <a href=\"{{ path('blog_ListPosts') }}\" class=\"txt27\">
                     Home
                 </a>
 
                 <span class=\"txt29 m-l-10 m-r-10\">/</span>
 
-                <span class=\"txt29\">
-\t\t\t\t\tBlog
-\t\t\t\t</span>
+                <a href=\"{{ path('blog_ListPosts') }}\" class=\"txt27\">
+                    Blog
+                </a>
 
         {% if app.user!=null %}
             </div>
-            <a href=\"#addEmployeeModal\" class=\"btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto\" data-toggle=\"modal\"><i class=\"material-icons\">&#xE147;</i> <span>  Add A Post</span></a>
+            <a href=\"#addEmployeeModal\" class=\"btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto\" data-toggle=\"modal\"><i class=\"material-icons\">&#xE147;</i> <span>Add A Post</span></a>
 
             </div>
         <!-- Add Modal HTML -->
@@ -710,6 +769,8 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
             <div class=\"modal-dialog\">
                 <div class=\"modal-content\">
                     {{ form_start(form) }}
+
+
 
 
 
@@ -736,7 +797,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                         </div>
                         <div class=\"form-group\">
                             <label>Article Content</label>
-                            {{ form_widget(form.articleContent, { 'attr': {'class': 'form-control', 'type' : 'textarea'} }) }}
+                            {{ form_widget(form.articleContent)}}
 
                         </div>
                         <div class=\"form-group\">
@@ -747,7 +808,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                     </div>
                     <div class=\"modal-footer\">
                         <input type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" value=\"Cancel\">
-                        <input type=\"submit\" class=\"btn btn-success\" value=\"Add\">
+                        <input type=\"submit\" onclick=\"myFunction()\" id=\"form\" name=\"form\" class=\"btn btn-success\" id=\"addb\" value=\"Add\">
                     </div>
                     {{ form_end(form) }}
                 </div>
@@ -765,10 +826,10 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
 
                         <!-- Block4 -->
                         {% for blogposts in v %}
-                        <div class=\"blo4 p-b-63\">
+                        <div class=\"blo4 p-b-63\" id=\"content\">
                             <div class=\"pic-blo4 hov-img-zoom bo-rad-10 pos-relative\">
-                                <a href={{ path('blog_detailblog') }}>
-                                    <img src=\"{{ asset('uploads/images/' ~ blogposts.image) }}\" width=\"600\" height=\"427\" alt=\"IMG-BLOG\">
+                                <a href={{ path('blog_Detail',{('postId'):blogposts.postId}) }}>
+                                    <img  src=\"{{ asset('uploads/images/' ~ blogposts.image) }}\" width=\"600\" height=\"427\" alt=\"IMG-BLOG\">
                                 </a>
 
                                 <div class=\"date-blo4 flex-col-c-m\">
@@ -784,17 +845,33 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                             </div>
 
                             <div class=\"text-blo4 p-t-33\">
+
                                 {% if app.user!=null %}
                                 {% if app.user.id==blogposts.author.id %}
-                                <a href=\"#myModal\" class=\"delete\" data-toggle=\"modal\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Delete\">&#xE872;</i></a>
+                                <a href=\"#myModal\" class=\"delete\" data-toggle=\"modal\"><i class=\"fas fa-trash-alt\" data-toggle=\"tooltip\" title=\"Delete\"></i></a>
 
-                                <a href=\"#editEmployeeModal\" class=\"edit\" data-toggle=\"modal\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Edit\">&#xE254;</i></a>
+                                <a href=\"{{ path('Update_BlogPost',{('postId'):blogposts.postId}) }}\"><i class=\"fas fa-edit\" data-toggle=\"tooltip\" title=\"Edit\"></i></a>
                                 {% endif %}
+                                {% endif %}
+                                {% if app.user!=null %}
+                                <a href=\"{{ path('blog_Like',{('postId'):blogposts.postId,('id'):app.user.id}) }}\" class=\"link\">
+                                    <i class=\"far fa-thumbs-up\" style=\"color:midnightblue\"></i>
+                                    <span class=\"js-likes\" style=\"color: midnightblue\">{{ blogposts.postLikesCount }}</span>
+                                    <span class=\"js-label\" style=\"color: midnightblue\">Like</span>
+                                </a>
+                                {% endif %}
+                                {% if app.user==null %}
+                                    <a>
+                                        <i class=\"far fa-thumbs-up\" style=\"color:midnightblue\"></i>
+                                        <span class=\"js-likes\" style=\"color: midnightblue\">{{ blogposts.postLikesCount }}</span>
+                                        <span class=\"js-label\" style=\"color: midnightblue\">Like</span>
+                                    </a>
                                 {% endif %}
 
                                 <h4 class=\"p-b-16\">
-                                    <a href=\"\" class=\"tit9\">{{ blogposts.postContent }}</a>
+                                    <a href={{ path('blog_Detail',{('postId'):blogposts.postId}) }} class=\"tit9\">{{ blogposts.postContent }}</a>
                                 </h4>
+
 
                                 <div class=\"txt32 flex-w p-b-24\">
 \t\t\t\t\t\t\t\t\t<span>
@@ -837,6 +914,7 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                                                         <div class=\"modal-footer\">
                                                             <button type=\"button\" class=\"btn btn-info\" data-dismiss=\"modal\">Cancel</button>
                                                             <a href=\"{{ path('blog_delete',{('postId'):blogposts.postId}) }}\" type=\"button\" class=\"btn btn-danger\"><label style=\"color:white;\">Delete</label></a>
+
 
                                                         </div>
                                                     </div>
@@ -883,12 +961,12 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                                 </div>
 
                                 <p style=\" word-wrap:break-word\">
-                                    {{ blogposts.articleContent }}
+                                    {{ blogposts.articleContent|raw }}
                                 </p>
 
-                                <a href={{ path('blog_Detail',{('postId'):blogposts.postId}) }} class=\"dis-block txt4 m-t-30\">
+                                <a class=\"dis-block txt4m-t-30\" href={{ path('blog_Detail',{('postId'):blogposts.postId}) }} >
                                 Continue Reading
-                                <i class=\"fa fa-long-arrow-right m-l-10\" aria-hidden=\"true\"></i>
+                                <i class=\"fas fa-book-open\"></i>
                                 </a>
                             </div>
                         </div>
@@ -923,31 +1001,36 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                             <ul>
                                 <li class=\"bo5-b p-t-8 p-b-8\">
                                     <a href=\"#\" class=\"txt27\">
-                                        Cooking recipe
+                                        Newsjacking
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
                                     <a href=\"#\" class=\"txt27\">
-                                        Delicious foods
+                                        Instructional
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
                                     <a href=\"#\" class=\"txt27\">
-                                        Events Design
+                                        Personal Spotlight
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
                                     <a href=\"#\" class=\"txt27\">
-                                        Restaurant Place
+                                        Cheat Sheet
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
                                     <a href=\"#\" class=\"txt27\">
-                                        WordPress
+                                        Media
+                                    </a>
+                                </li>
+                                <li class=\"bo5-b p-t-8 p-b-8\">
+                                    <a href=\"#\" class=\"txt27\">
+                                        Entertaining
                                     </a>
                                 </li>
                             </ul>
@@ -1145,8 +1228,22 @@ class __TwigTemplate_19e98960e028fd48bb49710cecb137c0e8818a5a376a307cac66bec3bce
                 </div>
             </div>
         </div>
+
+
     </section>
+
+
+
+
+
+
 {% endblock %}
+
+
+
+
+
+
 ", "BlogBundle:BlogViews:Blog.html.twig", "C:\\wamp64\\www\\smartstart\\src\\BlogBundle/Resources/views/BlogViews/Blog.html.twig");
     }
 }

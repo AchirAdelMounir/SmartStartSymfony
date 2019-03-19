@@ -66,7 +66,10 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
         // line 4
         echo "
-    <section class=\"bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15\" style=\"background-image: url(/images/bg-title-page-03.jpg);\">
+    <section class=\"bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15\" style=\"background-image: url(";
+        // line 5
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/images/blog-banner.png"), "html", null, true);
+        echo ");\">
         <h2 class=\"tit6 t-center\">
             Blog
         </h2>
@@ -77,20 +80,35 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
     <section>
         <div class=\"bread-crumb bo5-b p-t-17 p-b-17\">
             <div class=\"container\">
-                <a href=\"index.html\" class=\"txt27\">
+                <a href=\"";
+        // line 16
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_ListPosts");
+        echo "\" class=\"txt27\">
                     Home
                 </a>
 
                 <span class=\"txt29 m-l-10 m-r-10\">/</span>
 
-                <a href=\"blog.html\" class=\"txt27\">
+                <a href=\"";
+        // line 22
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_ListPosts");
+        echo "\" class=\"txt27\">
                     Blog
                 </a>
 
                 <span class=\"txt29 m-l-10 m-r-10\">/</span>
+                <a href=\"";
+        // line 27
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_ListPosts");
+        echo "\" class=\"txt27\">
+                    Detail
+                </a>
 
                 <span class=\"txt29\">
-\t\t\t\t\tCooking recipe delicious
+                    ";
+        // line 32
+        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")), "articleTitle", []), "html", null, true);
+        echo "
 \t\t\t\t</span>
             </div>
         </div>
@@ -105,18 +123,22 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
                             <div class=\"pic-blo4 hov-img-zoom bo-rad-10 pos-relative\">
                                 <a href=\"blog-detail.html\">
                                     <img src=\"";
-        // line 43
+        // line 46
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/images/" . $this->getAttribute((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")), "image", []))), "html", null, true);
         echo "\" alt=\"IMG-BLOG\" width=\"600\" height=\"427\">
                                 </a>
 
                                 <div class=\"date-blo4 flex-col-c-m\">
 \t\t\t\t\t\t\t\t\t<span class=\"txt30 m-b-4\">
-\t\t\t\t\t\t\t\t\t\t28
+
+
 \t\t\t\t\t\t\t\t\t</span>
 
                                     <span class=\"txt31\">
-\t\t\t\t\t\t\t\t\t\tDec, 2018
+\t\t\t\t\t\t\t\t\t\t";
+        // line 56
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")), "postDate", []), "m/d/Y"), "html", null, true);
+        echo "
 \t\t\t\t\t\t\t\t\t</span>
                                 </div>
                             </div>
@@ -125,44 +147,44 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
                             <div class=\"text-blo4 p-t-33\">
 
                                 <h4 class=\"p-b-16\">
-                                    <a href=\"blog-detail.html\" class=\"tit9\" style=\"word-wrap:break-word\">";
-        // line 61
+                                    <a href=\"blog-detail.html\" class=\"tit9\" style=\"word-wrap:break-word;font-family: Montserrat-Bold\">";
+        // line 65
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")), "articleTitle", []), "html", null, true);
         echo "</a>
                                    <p style=\"word-wrap:break-word\">Post :";
-        // line 62
+        // line 66
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")), "postContent", []), "html", null, true);
         echo "</p>
                                 </h4>
 
                                 <div class=\"txt32 flex-w p-b-24\">
-\t\t\t\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t\t\t<span style=\"font-family: Montserrat-Bold\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 67
+        // line 71
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")), "author", []), "username", []), "html", null, true);
         echo "
 \t\t\t\t\t\t\t\t\t\t<span class=\"m-r-6 m-l-4\">|</span>
 \t\t\t\t\t\t\t\t\t</span>
 
-                                    <span>
+                                    <span style=\"font-family: Montserrat-Bold\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 72
+        // line 76
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")), "postDate", []), "m/d/Y"), "html", null, true);
         echo "
 \t\t\t\t\t\t\t\t\t\t<span class=\"m-r-6 m-l-4\">|</span>
 \t\t\t\t\t\t\t\t\t</span>
 
-                                    <span>
+                                    <span style=\"font-family: Montserrat-Bold\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 77
+        // line 81
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")), "postType", []), "html", null, true);
         echo "
 \t\t\t\t\t\t\t\t\t\t<span class=\"m-r-6 m-l-4\">|</span>
 \t\t\t\t\t\t\t\t\t</span>
 
-                                    <span>
+                                    <span style=\"font-family: Montserrat-Bold\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 82
+        // line 86
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")), "postCommentCount", []), "html", null, true);
         echo " Comments
 \t\t\t\t\t\t\t\t\t</span>
@@ -172,9 +194,9 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
                             </div>
 
 
-                        <p style=\"word-wrap:break-word\">Article Content:";
-        // line 90
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")), "articleContent", []), "html", null, true);
+                        <p style=\"word-wrap:break-word\">";
+        // line 94
+        echo $this->getAttribute((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")), "articleContent", []);
         echo " </p>
 
                             <hr>
@@ -185,100 +207,81 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
 
 
-                            <div class=\"text-blo4 p-t-33\">
-                                <h4 class=\"p-b-16\">
-                                    Comments
-                                </h4>
+                            <div class=\"text-blo4 p-t-33\" style=\"word-wrap:break-word\">
+
                                 ";
-        // line 104
+        // line 106
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["com"]) ? $context["com"] : $this->getContext($context, "com")));
         foreach ($context['_seq'] as $context["_key"] => $context["comments"]) {
-            // line 105
-            echo "                                    ";
+            // line 107
+            echo "                                    <div class=\"media\" style=\"word-wrap:break-word\">
+
+
+                                        <div class=\"media-body\" style=\"word-wrap:break-word\">
+                                            <h4 class=\"media-heading\" style=\"font-family: Montserrat-Bold\">";
+            // line 111
+            echo twig_escape_filter($this->env, $this->getAttribute($context["comments"], "commentAuthor", []), "html", null, true);
+            echo " <small><i style=\"font-family: Montserrat-SemiBold;font-size: 16px\">";
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comments"], "commentDate", []), "l jS  F Y h:i:s A"), "html", null, true);
+            echo "</i></small> ";
             if (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []) != null)) {
-                // line 106
-                echo "                                        ";
-                if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []), "id", []) == $this->getAttribute($this->getAttribute((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")), "author", []), "id", []))) {
-                    // line 107
-                    echo "                                            <!-- Modal HTML -->
-                                            <div id=\"myModal\" class=\"modal fade\">
-                                                <div class=\"modal-dialog modal-confirm\">
-                                                    <div class=\"modal-content\">
-                                                        <div class=\"modal-header\">
-                                                            <div class=\"icon-box\">
-                                                                <i class=\"material-icons\">&#xE5CD;</i>
-                                                            </div>
-                                                            <h4 class=\"modal-title\">Are you sure?</h4>
-                                                            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
-                                                        </div>
-                                                        <div class=\"modal-body\">
-                                                            <p>Do you really want to delete these records? This process cannot be undone.</p>
-                                                        </div>
-                                                        <div class=\"modal-footer\">
-                                                            <button type=\"button\" class=\"btn btn-info\" data-dismiss=\"modal\">Cancel</button>
-                                                            <a href=\"";
-                    // line 123
+                // line 112
+                echo "                                                    ";
+                if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []), "id", []) == $this->getAttribute($this->getAttribute($context["comments"], "commentAuthor", []), "id", []))) {
+                    // line 113
+                    echo "                                                        <!-- Modal HTML -->
+                                                        <div id=\"myModal\" class=\"modal fade\">
+                                                            <div class=\"modal-dialog modal-confirm\">
+                                                                <div class=\"modal-content\">
+                                                                    <div class=\"modal-header\">
+                                                                        <div class=\"icon-box\">
+                                                                            <i class=\"material-icons\">&#xE5CD;</i>
+                                                                        </div>
+                                                                        <h4 class=\"modal-title\">Are you sure?</h4>
+                                                                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
+                                                                    </div>
+                                                                    <div class=\"modal-body\">
+                                                                        <p>Do you really want to delete these records? This process cannot be undone.</p>
+                                                                    </div>
+                                                                    <div class=\"modal-footer\">
+                                                                        <button type=\"button\" class=\"btn btn-info\" data-dismiss=\"modal\">Cancel</button>
+                                                                        <a href=\"";
+                    // line 129
                     echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_deleteComment", ["commentId" => $this->getAttribute($context["comments"], "commentId", [])]), "html", null, true);
                     echo "\" type=\"button\" class=\"btn btn-danger\"><label style=\"color:white;\">Delete</label></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a href=\"#myModal\" class=\"delete\" data-toggle=\"modal\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Delete\">&#xE872;</i></a>
+                                                        <div class=\"right\">
+                                                        <a href=\"#myModal\" class=\"delete\" data-toggle=\"modal\"><i class=\"fas fa-trash-alt\" data-toggle=\"tooltip\" title=\"Delete\"></i></a>
 
-                                            <a href=\"#editEmployeeModal\" class=\"edit\" data-toggle=\"modal\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Edit\">&#xE254;</i></a>
-                                        ";
+                                                        <a href=\"#editEmployeeModal\" class=\"edit\" data-toggle=\"modal\"><i class=\"fas fa-edit\" data-toggle=\"tooltip\" title=\"Edit\"></i></a>
+                                                        </div>
+                                                    ";
                 }
-                // line 132
-                echo "                                    ";
+                // line 140
+                echo "                                                ";
             }
-            // line 133
-            echo "                                <div class=\"txt32 flex-w p-b-24\">
-\t\t\t\t\t\t\t\t\t<span>
-\t\t\t\t\t\t\t\t\t\tby ";
-            // line 135
-            echo twig_escape_filter($this->env, $this->getAttribute($context["comments"], "commentAuthor", []), "html", null, true);
-            echo "
-                                        <span class=\"m-r-6 m-l-4\">|</span>
-\t\t\t\t\t\t\t\t\t</span>
+            echo "</h4>
+
+                                                ";
+            // line 142
+            echo $this->getAttribute($context["comments"], "commentContent", []);
+            echo ".
+                                        </div>
+                                    </div>
+                                    <hr />
 
 
-
-
-                                    <span>
-\t\t\t\t\t\t\t\t\t\t";
-            // line 143
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comments"], "commentDate", []), "m/d/Y"), "html", null, true);
-            echo "
-                                            <span class=\"m-r-6 m-l-4\">|</span>
-\t\t\t\t\t\t\t\t\t</span>
-
-                                    <span>
-\t\t\t\t\t\t\t\t\t\t";
-            // line 148
-            echo twig_escape_filter($this->env, $this->getAttribute($context["comments"], "commentCount", []), "html", null, true);
-            echo " Comments
-                                        <span class=\"m-r-6 m-l-4\">|</span>
-\t\t\t\t\t\t\t\t\t</span>
-
-
-                                </div>
-
-                                <p>
-                                    ";
-            // line 156
-            echo twig_escape_filter($this->env, $this->getAttribute($context["comments"], "commentContent", []), "html", null, true);
-            echo "
-                                </p>
-                                    <hr>
 
                                 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comments'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 161
+        // line 150
         echo "                            </div>
 
                         </div>
@@ -289,9 +292,9 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
 
 ";
-        // line 170
+        // line 159
         if (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []) != null)) {
-            // line 171
+            // line 160
             echo "                        <!-- Leave a comment -->
 
                             <h4 class=\"txt33 p-b-14\">
@@ -302,7 +305,7 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
                             </p>
                             ";
-            // line 180
+            // line 169
             echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
             echo "
 
@@ -310,12 +313,12 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
 
                         ";
-            // line 185
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "commentContent", []), 'widget', ["attr" => ["class" => "bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-40", "type" => "textarea", "placeholder" => "Comment..."]]);
+            // line 174
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "commentContent", []), 'widget');
             echo "
 
                             <!-- Button3 -->
-                            <button type=\"submit\" class=\"btn3 flex-c-m size31 txt11 trans-0-4\">
+                            <button type=\"submit\" class=\"btn3 flex-c-m size31 txt11 trans-0-4\" id=\"addb\">
                                 Post Comment
                             </button>
                         <div class=\"text-center\">
@@ -324,21 +327,21 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
 
                         ";
-            // line 196
+            // line 185
             echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
             echo "
                         ";
         }
-        // line 198
+        // line 187
         echo "                        ";
         if (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []) == null)) {
-            // line 199
+            // line 188
             echo "                            <h4 class=\"txt33 p-b-14\">
                                 You must log in to leave a comment !
                             </h4>
                         ";
         }
-        // line 203
+        // line 192
         echo "
                     </div>
                 </div>
@@ -583,7 +586,9 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
             </div>
         </div>
     </section>
-
+    <script src=\"//cdn.ckeditor.com/4.11.3/full/ckeditor.js\"></script><script>
+    CKEDITOR.replace('editor1');
+</script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -605,7 +610,7 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
     public function getDebugInfo()
     {
-        return array (  342 => 203,  336 => 199,  333 => 198,  328 => 196,  314 => 185,  306 => 180,  295 => 171,  293 => 170,  282 => 161,  271 => 156,  260 => 148,  252 => 143,  241 => 135,  237 => 133,  234 => 132,  222 => 123,  204 => 107,  201 => 106,  198 => 105,  194 => 104,  177 => 90,  166 => 82,  158 => 77,  150 => 72,  142 => 67,  134 => 62,  130 => 61,  109 => 43,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
+        return array (  345 => 192,  339 => 188,  336 => 187,  331 => 185,  317 => 174,  309 => 169,  298 => 160,  296 => 159,  285 => 150,  271 => 142,  265 => 140,  251 => 129,  233 => 113,  230 => 112,  224 => 111,  218 => 107,  214 => 106,  199 => 94,  188 => 86,  180 => 81,  172 => 76,  164 => 71,  156 => 66,  152 => 65,  140 => 56,  127 => 46,  110 => 32,  102 => 27,  94 => 22,  85 => 16,  71 => 5,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -622,7 +627,7 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 {% block title %}Detail blog{% endblock %}
 {% block body %}
 
-    <section class=\"bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15\" style=\"background-image: url(/images/bg-title-page-03.jpg);\">
+    <section class=\"bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15\" style=\"background-image: url({{ asset('assets/images/blog-banner.png') }});\">
         <h2 class=\"tit6 t-center\">
             Blog
         </h2>
@@ -633,20 +638,23 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
     <section>
         <div class=\"bread-crumb bo5-b p-t-17 p-b-17\">
             <div class=\"container\">
-                <a href=\"index.html\" class=\"txt27\">
+                <a href=\"{{ path('blog_ListPosts') }}\" class=\"txt27\">
                     Home
                 </a>
 
                 <span class=\"txt29 m-l-10 m-r-10\">/</span>
 
-                <a href=\"blog.html\" class=\"txt27\">
+                <a href=\"{{ path('blog_ListPosts') }}\" class=\"txt27\">
                     Blog
                 </a>
 
                 <span class=\"txt29 m-l-10 m-r-10\">/</span>
+                <a href=\"{{ path('blog_ListPosts') }}\" class=\"txt27\">
+                    Detail
+                </a>
 
                 <span class=\"txt29\">
-\t\t\t\t\tCooking recipe delicious
+                    {{ v.articleTitle}}
 \t\t\t\t</span>
             </div>
         </div>
@@ -665,11 +673,12 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
                                 <div class=\"date-blo4 flex-col-c-m\">
 \t\t\t\t\t\t\t\t\t<span class=\"txt30 m-b-4\">
-\t\t\t\t\t\t\t\t\t\t28
+
+
 \t\t\t\t\t\t\t\t\t</span>
 
                                     <span class=\"txt31\">
-\t\t\t\t\t\t\t\t\t\tDec, 2018
+\t\t\t\t\t\t\t\t\t\t{{ v.postDate|date(\"m/d/Y\")}}
 \t\t\t\t\t\t\t\t\t</span>
                                 </div>
                             </div>
@@ -678,27 +687,27 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
                             <div class=\"text-blo4 p-t-33\">
 
                                 <h4 class=\"p-b-16\">
-                                    <a href=\"blog-detail.html\" class=\"tit9\" style=\"word-wrap:break-word\">{{ v.articleTitle }}</a>
+                                    <a href=\"blog-detail.html\" class=\"tit9\" style=\"word-wrap:break-word;font-family: Montserrat-Bold\">{{ v.articleTitle }}</a>
                                    <p style=\"word-wrap:break-word\">Post :{{ v.postContent }}</p>
                                 </h4>
 
                                 <div class=\"txt32 flex-w p-b-24\">
-\t\t\t\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t\t\t<span style=\"font-family: Montserrat-Bold\">
 \t\t\t\t\t\t\t\t\t\t{{ v.author.username }}
 \t\t\t\t\t\t\t\t\t\t<span class=\"m-r-6 m-l-4\">|</span>
 \t\t\t\t\t\t\t\t\t</span>
 
-                                    <span>
+                                    <span style=\"font-family: Montserrat-Bold\">
 \t\t\t\t\t\t\t\t\t\t{{ v.postDate|date(\"m/d/Y\")}}
 \t\t\t\t\t\t\t\t\t\t<span class=\"m-r-6 m-l-4\">|</span>
 \t\t\t\t\t\t\t\t\t</span>
 
-                                    <span>
+                                    <span style=\"font-family: Montserrat-Bold\">
 \t\t\t\t\t\t\t\t\t\t{{ v.postType }}
 \t\t\t\t\t\t\t\t\t\t<span class=\"m-r-6 m-l-4\">|</span>
 \t\t\t\t\t\t\t\t\t</span>
 
-                                    <span>
+                                    <span style=\"font-family: Montserrat-Bold\">
 \t\t\t\t\t\t\t\t\t\t{{ v.postCommentCount }} Comments
 \t\t\t\t\t\t\t\t\t</span>
                                 </div>
@@ -707,7 +716,7 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
                             </div>
 
 
-                        <p style=\"word-wrap:break-word\">Article Content:{{ v.articleContent }} </p>
+                        <p style=\"word-wrap:break-word\">{{ v.articleContent|raw }} </p>
 
                             <hr>
                             <div class=\"blo4 p-b-63\">
@@ -717,65 +726,50 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
 
 
-                            <div class=\"text-blo4 p-t-33\">
-                                <h4 class=\"p-b-16\">
-                                    Comments
-                                </h4>
+                            <div class=\"text-blo4 p-t-33\" style=\"word-wrap:break-word\">
+
                                 {% for comments in com %}
-                                    {% if app.user!=null %}
-                                        {% if app.user.id==v.author.id %}
-                                            <!-- Modal HTML -->
-                                            <div id=\"myModal\" class=\"modal fade\">
-                                                <div class=\"modal-dialog modal-confirm\">
-                                                    <div class=\"modal-content\">
-                                                        <div class=\"modal-header\">
-                                                            <div class=\"icon-box\">
-                                                                <i class=\"material-icons\">&#xE5CD;</i>
+                                    <div class=\"media\" style=\"word-wrap:break-word\">
+
+
+                                        <div class=\"media-body\" style=\"word-wrap:break-word\">
+                                            <h4 class=\"media-heading\" style=\"font-family: Montserrat-Bold\">{{ comments.commentAuthor }} <small><i style=\"font-family: Montserrat-SemiBold;font-size: 16px\">{{ comments.commentDate|date('l jS \\f F Y h:i:s A') }}</i></small> {% if app.user!=null %}
+                                                    {% if app.user.id==comments.commentAuthor.id %}
+                                                        <!-- Modal HTML -->
+                                                        <div id=\"myModal\" class=\"modal fade\">
+                                                            <div class=\"modal-dialog modal-confirm\">
+                                                                <div class=\"modal-content\">
+                                                                    <div class=\"modal-header\">
+                                                                        <div class=\"icon-box\">
+                                                                            <i class=\"material-icons\">&#xE5CD;</i>
+                                                                        </div>
+                                                                        <h4 class=\"modal-title\">Are you sure?</h4>
+                                                                        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
+                                                                    </div>
+                                                                    <div class=\"modal-body\">
+                                                                        <p>Do you really want to delete these records? This process cannot be undone.</p>
+                                                                    </div>
+                                                                    <div class=\"modal-footer\">
+                                                                        <button type=\"button\" class=\"btn btn-info\" data-dismiss=\"modal\">Cancel</button>
+                                                                        <a href=\"{{ path('blog_deleteComment',{('commentId'):comments.commentId}) }}\" type=\"button\" class=\"btn btn-danger\"><label style=\"color:white;\">Delete</label></a>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <h4 class=\"modal-title\">Are you sure?</h4>
-                                                            <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
                                                         </div>
-                                                        <div class=\"modal-body\">
-                                                            <p>Do you really want to delete these records? This process cannot be undone.</p>
+                                                        <div class=\"right\">
+                                                        <a href=\"#myModal\" class=\"delete\" data-toggle=\"modal\"><i class=\"fas fa-trash-alt\" data-toggle=\"tooltip\" title=\"Delete\"></i></a>
+
+                                                        <a href=\"#editEmployeeModal\" class=\"edit\" data-toggle=\"modal\"><i class=\"fas fa-edit\" data-toggle=\"tooltip\" title=\"Edit\"></i></a>
                                                         </div>
-                                                        <div class=\"modal-footer\">
-                                                            <button type=\"button\" class=\"btn btn-info\" data-dismiss=\"modal\">Cancel</button>
-                                                            <a href=\"{{ path('blog_deleteComment',{('commentId'):comments.commentId}) }}\" type=\"button\" class=\"btn btn-danger\"><label style=\"color:white;\">Delete</label></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a href=\"#myModal\" class=\"delete\" data-toggle=\"modal\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Delete\">&#xE872;</i></a>
+                                                    {% endif %}
+                                                {% endif %}</h4>
 
-                                            <a href=\"#editEmployeeModal\" class=\"edit\" data-toggle=\"modal\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Edit\">&#xE254;</i></a>
-                                        {% endif %}
-                                    {% endif %}
-                                <div class=\"txt32 flex-w p-b-24\">
-\t\t\t\t\t\t\t\t\t<span>
-\t\t\t\t\t\t\t\t\t\tby {{ comments.commentAuthor }}
-                                        <span class=\"m-r-6 m-l-4\">|</span>
-\t\t\t\t\t\t\t\t\t</span>
+                                                {{ comments.commentContent|raw }}.
+                                        </div>
+                                    </div>
+                                    <hr />
 
 
-
-
-                                    <span>
-\t\t\t\t\t\t\t\t\t\t{{ comments.commentDate|date(\"m/d/Y\") }}
-                                            <span class=\"m-r-6 m-l-4\">|</span>
-\t\t\t\t\t\t\t\t\t</span>
-
-                                    <span>
-\t\t\t\t\t\t\t\t\t\t{{ comments.commentCount }} Comments
-                                        <span class=\"m-r-6 m-l-4\">|</span>
-\t\t\t\t\t\t\t\t\t</span>
-
-
-                                </div>
-
-                                <p>
-                                    {{ comments.commentContent }}
-                                </p>
-                                    <hr>
 
                                 {% endfor %}
                             </div>
@@ -802,10 +796,10 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
 
 
-                        {{ form_widget(form.commentContent, { 'attr': {'class': 'bo-rad-10 size29 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-40', 'type' : 'textarea', 'placeholder':'Comment...' } }) }}
+                        {{ form_widget(form.commentContent)}}
 
                             <!-- Button3 -->
-                            <button type=\"submit\" class=\"btn3 flex-c-m size31 txt11 trans-0-4\">
+                            <button type=\"submit\" class=\"btn3 flex-c-m size31 txt11 trans-0-4\" id=\"addb\">
                                 Post Comment
                             </button>
                         <div class=\"text-center\">
@@ -1064,7 +1058,10 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
             </div>
         </div>
     </section>
-
-{% endblock %}", "BlogBundle:BlogViews:DetailBlog.html.twig", "C:\\wamp64\\www\\smartstart\\src\\BlogBundle/Resources/views/BlogViews/DetailBlog.html.twig");
+    <script src=\"//cdn.ckeditor.com/4.11.3/full/ckeditor.js\"></script><script>
+    CKEDITOR.replace('editor1');
+</script>
+{% endblock %}
+", "BlogBundle:BlogViews:DetailBlog.html.twig", "C:\\wamp64\\www\\smartstart\\src\\BlogBundle/Resources/views/BlogViews/DetailBlog.html.twig");
     }
 }

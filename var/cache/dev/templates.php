@@ -118,6 +118,7 @@
   'BlogBundle:BlogViews:AddComment.html.twig' => __DIR__.'/../../../src/BlogBundle/Resources/views/BlogViews/AddComment.html.twig',
   'BlogBundle:BlogViews:Blog.html.twig' => __DIR__.'/../../../src/BlogBundle/Resources/views/BlogViews/Blog.html.twig',
   'BlogBundle:BlogViews:DetailBlog.html.twig' => __DIR__.'/../../../src/BlogBundle/Resources/views/BlogViews/DetailBlog.html.twig',
+  'BlogBundle:BlogViews:UpdateBlogPost.html.twig' => __DIR__.'/../../../src/BlogBundle/Resources/views/BlogViews/UpdateBlogPost.html.twig',
   'BlogBundle:Default:index.html.twig' => __DIR__.'/../../../src/BlogBundle/Resources/views/Default/index.html.twig',
   'TilowebPaginationBundle::pagination.html.twig' => __DIR__.'/../../../vendor/tiloweb/pagination-bundle/Tiloweb/PaginationBundle/Resources/views/pagination.html.twig',
   'DebugBundle:Profiler:dump.html.twig' => __DIR__.'/../../../vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views/Profiler/dump.html.twig',

@@ -206,5 +206,24 @@ class BlogPostsController extends Controller
 
 
     }
+    public function searchAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $requestString = $request->get('q');
+        $entities =  $em->getRepository('AppBundle:Blogposts')->findEntitiesByString($requestString);
+        if(!$entities) {
+            $result['entities']['error'] = "rien trouvé";
+        } else {
+            $result['entities'] = $this->getRealEntities($entities);
+        }
+        return new Response(json_encode($result));
+    }
+    public function getRealEntities(Blogposts $entities){
+
+        foreach ($entities as $entity){
+            $realEntities[$entities->getPostId()] = $entity->getFoo();
+        }
+        return $realEntities;
+    }
 
 }

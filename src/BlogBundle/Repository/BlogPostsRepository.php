@@ -73,6 +73,13 @@ class BlogPostsRepository extends EntityRepository
         return $qb->getQuery()
             ->getResult();
     }
+    public function findEntitiesByString($str){
+        return $this->getEntityManager()->createQuery( 'SELECT e
+                FROM AppBundle:Blogposts e
+                WHERE e.foo LIKE :str')
+            ->setParameter('str', '%'.$str.'%')
+            ->getResult();
+    }
 
 
 }

@@ -94,8 +94,8 @@
                         {% for blogposts in v %}
                         <div class="blo4 p-b-63" id="content">
                             <div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-                                <a href={{ path('blog_detailblog') }}>
-                                    <img src="{{ asset('uploads/images/' ~ blogposts.image) }}" width="600" height="427" alt="IMG-BLOG">
+                                <a href={{ path('blog_Detail',{('postId'):blogposts.postId}) }}>
+                                    <img  src="{{ asset('uploads/images/' ~ blogposts.image) }}" width="600" height="427" alt="IMG-BLOG">
                                 </a>
 
                                 <div class="date-blo4 flex-col-c-m">
@@ -119,15 +119,23 @@
                                 <a href="{{ path('Update_BlogPost',{('postId'):blogposts.postId}) }}"><i class="fas fa-edit" data-toggle="tooltip" title="Edit"></i></a>
                                 {% endif %}
                                 {% endif %}
-
+                                {% if app.user!=null %}
                                 <a href="{{ path('blog_Like',{('postId'):blogposts.postId,('id'):app.user.id}) }}" class="link">
                                     <i class="far fa-thumbs-up" style="color:midnightblue"></i>
                                     <span class="js-likes" style="color: midnightblue">{{ blogposts.postLikesCount }}</span>
                                     <span class="js-label" style="color: midnightblue">Like</span>
                                 </a>
+                                {% endif %}
+                                {% if app.user==null %}
+                                    <a>
+                                        <i class="far fa-thumbs-up" style="color:midnightblue"></i>
+                                        <span class="js-likes" style="color: midnightblue">{{ blogposts.postLikesCount }}</span>
+                                        <span class="js-label" style="color: midnightblue">Like</span>
+                                    </a>
+                                {% endif %}
 
                                 <h4 class="p-b-16">
-                                    <a href="" class="tit9">{{ blogposts.postContent }}</a>
+                                    <a href={{ path('blog_Detail',{('postId'):blogposts.postId}) }} class="tit9">{{ blogposts.postContent }}</a>
                                 </h4>
 
 
@@ -496,6 +504,7 @@
 
 
 {% endblock %}
+
 
 
 
